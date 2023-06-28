@@ -1,14 +1,13 @@
 .sources {
     display: flex;
-    padding-left: .5rem;
-
+    margin-top: .2px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     div {
-        margin-left: 1rem;
         margin-top: 1rem;
         appearance: none;
         background-color: #FAFBFC;
         border: 1px solid rgba(27, 31, 35, 0.15);
-        // border-radius: 6px 6px 0px 6px;
         box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
         box-sizing: border-box;
         color: #24292E;
@@ -55,7 +54,6 @@
             display: none;
         }
     }
-        border-bottom: 1px solid black;
 }
 
 
@@ -86,28 +84,4 @@
   vertical-align: middle;
   white-space: nowrap;
   word-wrap: break-word;
-}
-
-.button-4:hover {
-
-}
-
-.button-4:disabled {
-  
-}
-
-.button-4:active {
-  
-}
-
-.button-4:focus {
-  
-}
-
-.button-4:before {
-  
-}
-
-.button-4:-webkit-details-marker {
-  display: none;
 }
