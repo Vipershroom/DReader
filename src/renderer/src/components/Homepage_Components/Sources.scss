@@ -3,7 +3,8 @@
     margin-top: .2px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    div {
+    button {
+        all: unset;
         margin-top: 1rem;
         appearance: none;
         background-color: #FAFBFC;
@@ -41,7 +42,7 @@
         }
 
         &:active {
-            background-color: #EDEFF2;
+            background-color: #f73809;
             box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
             transition: none 0s;
         }

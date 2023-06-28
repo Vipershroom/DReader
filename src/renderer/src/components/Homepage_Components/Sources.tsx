@@ -5,7 +5,7 @@ const Sources = () => {
     return (
         <div>
             <div className="sources">
-                <div>MangaDex</div>
+                <button>MangaDex</button>
             </div>
         </div>
     )
