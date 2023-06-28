@@ -64,6 +64,9 @@ devDependencies:
   eslint-plugin-react:
     specifier: ^7.32.2
     version: 7.32.2(eslint@8.42.0)
+  mangadex-full-api:
+    specifier: ^5.12.1
+    version: 5.12.1
   prettier:
     specifier: ^2.8.8
     version: 2.8.8
@@ -2808,6 +2811,11 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
+    dev: true
+
+  /mangadex-full-api@5.12.1:
+    resolution: {integrity: sha512-YxkAzHCd9webTo6W7pUlwXEMq+g3PUmgP0IPKFs8no9T5WcenE4VxtvoIAAPiDYa6bgHRljGnCNq28Yhl2c0dA==}
+    engines: {node: '>=12.0.0'}
     dev: true
 
   /matcher@3.0.0:
