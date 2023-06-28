@@ -1,12 +1,11 @@
 import React from 'react'
 import './Sources.scss'
 
-const Sources = (props) => {
+const Sources = () => {
     return (
         <div>
             <div className="sources">
-                <div>{props.names}</div>
-                <div>Hi</div>
+                <div>MangaDex</div>
             </div>
         </div>
     )
