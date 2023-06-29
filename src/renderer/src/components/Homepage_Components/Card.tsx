@@ -19,7 +19,9 @@ const Card = () => {
                         </p>
                     </div>
                 </div>
-                <h2>Title</h2>
+                <div className="title">
+                    <h2>Title</h2>
+                </div>
             </div>
         </>
     )
