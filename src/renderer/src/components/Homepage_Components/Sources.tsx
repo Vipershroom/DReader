@@ -1,5 +1,5 @@
 import React from 'react'
-import './Sources.scss'
+import './styles/Sources.scss'
 
 const Sources = () => {
     return (
