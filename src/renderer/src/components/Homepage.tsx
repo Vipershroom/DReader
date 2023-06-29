@@ -13,7 +13,6 @@ const Homepage = () => {
     ])
     useEffect(() => {
         return () => {
-            console.log('hi')
             window.electron.ipcRenderer.send('card-fetch')
             window.electron.ipcRenderer.on(
                 'card-recieve',
