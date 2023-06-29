@@ -74,16 +74,12 @@ app.on('window-all-closed', () => {
 
 // Fetch title, description, and cover art
 
-interface MangaCard {
-    title: string
-    description: string
-    cover: string
-}
+import { MangaCard } from '../interfaces/interfaces'
 
 async function get_recently_updated_manga() {
     const manga: MangaCard[] = []
     const search = await MD.Manga.search({
-        title: '',
+        title: 'Onii-chan is done for',
         limit: 1,
     })
     for (const elem of search) {
@@ -99,6 +95,7 @@ async function get_recently_updated_manga() {
 ipcMain.on('card-fetch', (event) => {
     console.log('Message recieved')
     get_recently_updated_manga().then((data) => {
-        console.log(data)
+        console.log(data[0].title)
+        event.reply('card-recieve', data)
     })
 })
