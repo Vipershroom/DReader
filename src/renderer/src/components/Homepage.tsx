@@ -7,6 +7,13 @@ const Homepage = () => {
         <div>
             <Sources />
             <Categorys />
+            <button
+                onClick={() => {
+                    window.electron.ipcRenderer.send('card-fetch')
+                }}
+            >
+                Hello
+            </button>
         </div>
     )
 }

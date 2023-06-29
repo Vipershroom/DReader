@@ -1,7 +1,9 @@
-import { app, shell, BrowserWindow } from 'electron'
-import { join } from 'path'
-import { electronApp, optimizer, is } from '@electron-toolkit/utils'
+import { app, shell, BrowserWindow, ipcMain } from 'electron'
+import { join, resolve } from 'path'
 import icon from '../../resources/icon.png?asset'
+import { electronApp, optimizer, is } from '@electron-toolkit/utils'
+
+import * as MD from 'mangadex-full-api'
 
 function createWindow(): void {
     // Create the browser window.
@@ -69,3 +71,34 @@ app.on('window-all-closed', () => {
 
 // In this file you can include the rest of your app"s specific main process
 // code. You can also put them in separate files and require them here.
+
+// Fetch title, description, and cover art
+
+interface MangaCard {
+    title: string
+    description: string
+    cover: string
+}
+
+async function get_recently_updated_manga() {
+    const manga: MangaCard[] = []
+    const search = await MD.Manga.search({
+        title: '',
+        limit: 1,
+    })
+    for (const elem of search) {
+        const cov = await elem.getCovers()
+        manga.push({
+            title: elem.title,
+            description: elem.description,
+            cover: cov[0].image256,
+        })
+    }
+    return manga
+}
+ipcMain.on('card-fetch', (event) => {
+    console.log('Message recieved')
+    get_recently_updated_manga().then((data) => {
+        console.log(data)
+    })
+})
