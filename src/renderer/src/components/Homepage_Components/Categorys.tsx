@@ -1,5 +1,6 @@
 import React from 'react'
 import './styles/Category.scss'
+import Card from './Card'
 const Categorys = () => {
     return (
         <div className="categorys">
@@ -7,7 +8,7 @@ const Categorys = () => {
                 <h1>Header</h1>
             </div>
             <div>
-                <h1>Card</h1>
+                <Card />
             </div>
         </div>
     )
