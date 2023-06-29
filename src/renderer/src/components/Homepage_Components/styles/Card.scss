@@ -22,6 +22,7 @@
             opacity: 0;
             width: 100%;
             height: 100%;
+            border-radius: 1rem;
             transition: 0.5s ease;
         }
     
@@ -34,11 +35,13 @@
         .description {
             padding: .5rem;
             width: 100%;
-            height: 100%;
+            height: 90%;
             font-size: 14px;
             color: #fff;
             z-index: 3;
             opacity: 0;
+            overflow: hidden;
+            border-radius: 1rem;
     
             &:hover {
                 opacity: 1;
