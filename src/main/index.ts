@@ -72,10 +72,9 @@ app.on('window-all-closed', () => {
 // In this file you can include the rest of your app"s specific main process
 // code. You can also put them in separate files and require them here.
 
-// Fetch title, description, and cover art
-
 import { MangaCard } from '../interfaces/interfaces'
 
+// Gets recently updated manga
 async function get_recently_updated_manga() {
     const manga: MangaCard[] = []
     const search = await MD.Manga.search({
@@ -92,6 +91,8 @@ async function get_recently_updated_manga() {
     }
     return manga
 }
+
+// Listens for a card fetch event to get the manga data
 ipcMain.on('card-fetch', (event) => {
     console.log('Message recieved')
     get_recently_updated_manga().then((data) => {
