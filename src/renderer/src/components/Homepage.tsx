@@ -19,22 +19,20 @@ const Homepage = () => {
         },
     ])
     useEffect(() => {
-        return () => {
-            window.electron.ipcRenderer.send('card-fetch')
-            window.electron.ipcRenderer.on(
-                'card-recieve',
-                (event, data: Array<MangaCard>) => {
-                    setRecentlyUpdated(data)
-                    console.log('Done fetching')
-                }
-            )
-            window.electron.ipcRenderer.on(
-                'isekai-recieve',
-                (event, data: Array<MangaCard>) => {
-                    setIsekai(data)
-                }
-            )
-        }
+        window.electron.ipcRenderer.send('card-fetch')
+        window.electron.ipcRenderer.on(
+            'card-recieve',
+            (event, data: Array<MangaCard>) => {
+                setRecentlyUpdated(data)
+                console.log('Done fetching')
+            }
+        )
+        window.electron.ipcRenderer.on(
+            'isekai-recieve',
+            (event, data: Array<MangaCard>) => {
+                setIsekai(data)
+            }
+        )
     }, [])
 
     return (
