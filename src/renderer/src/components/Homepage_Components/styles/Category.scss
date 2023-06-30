@@ -4,8 +4,18 @@
         padding: .7rem;
         border-bottom: 1px solid #fff;
     }
+
+    
     .card-row {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(5, 10rem);
+    }
+    @media (min-width: 950px) {
+        .card-row {
+            display: grid;
+            grid-template-columns: repeat(9, 10rem);
+        }
+        
     }
 }
 
