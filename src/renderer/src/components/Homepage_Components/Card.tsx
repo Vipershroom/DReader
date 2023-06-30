@@ -21,7 +21,7 @@ const Card = (props: { props: MangaCard }) => {
                     </div>
                 </div>
                 <div className="title">
-                    <h2>{props.props.title}</h2>
+                    <h3>{props.props.title}</h3>
                 </div>
             </div>
         </>
