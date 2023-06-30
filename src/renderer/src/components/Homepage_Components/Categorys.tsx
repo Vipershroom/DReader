@@ -12,10 +12,6 @@ const Categorys = (props: { props: Array<MangaCard> }) => {
             </div>
             <div className="card-row">
                 {props.props.map((manga) => {
-                    // let count = 0
-                    // if (count === 4) {
-                    //     return
-                    // }
                     return (
                         // eslint-disable-next-line react/jsx-key
                         <Card

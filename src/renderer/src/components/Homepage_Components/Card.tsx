@@ -13,10 +13,6 @@ const Card = ({ title, description, cover }: MangaCard) => {
                     }}
                 >
                     <div className="description">
-                        {/*
-                        TODO
-                        Add a check for characters, character limit is: 234
-                        */}
                         <p>{description}</p>
                     </div>
                 </div>
