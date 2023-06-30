@@ -3,11 +3,14 @@ import './styles/Category.scss'
 import Card from './Card'
 import { MangaCard } from 'src/interfaces/interfaces'
 
-const Categorys = (props: { props: Array<MangaCard> }) => {
+const Categorys = (
+    props: { props: Array<MangaCard>; header: string },
+    header: { header: string }
+) => {
     return (
         <div className="categorys">
             <div className="header">
-                <h1>Header</h1>
+                <h1>{props.header}</h1>
             </div>
             <div className="card-row">
                 {props.props.map((manga) => {
@@ -21,7 +24,6 @@ const Categorys = (props: { props: Array<MangaCard> }) => {
                     )
                 })}
             </div>
-            <div className="header"></div>
         </div>
     )
 }

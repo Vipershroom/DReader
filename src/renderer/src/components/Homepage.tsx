@@ -38,8 +38,8 @@ const Homepage = () => {
     return (
         <div>
             <Sources />
-            <Categorys props={recentlyUpdated} />
-            <Categorys props={isekai} />
+            <Categorys props={recentlyUpdated} header={'Recently Updated'} />
+            <Categorys props={isekai} header={'Isekai'} />
         </div>
     )
 }
