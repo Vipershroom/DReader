@@ -79,7 +79,7 @@ async function get_recently_updated_manga() {
     const manga: MangaCard[] = []
     const search = await MD.Manga.search({
         title: 'Onii-chan is done for',
-        limit: 1,
+        limit: 5,
     })
     for (const elem of search) {
         const cov = await elem.getCovers()

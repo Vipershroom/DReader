@@ -2,14 +2,14 @@ import React from 'react'
 import './styles/Card.scss'
 import { MangaCard } from '../../../../interfaces/interfaces'
 
-const Card = (props: { props: MangaCard }) => {
+const Card = ({ title, description, cover }: MangaCard) => {
     return (
         <>
             <div className="card-wrapper">
                 <div
                     className="card"
                     style={{
-                        backgroundImage: `url(${props.props.cover})`,
+                        backgroundImage: `url(${cover})`,
                     }}
                 >
                     <div className="description">
@@ -17,11 +17,11 @@ const Card = (props: { props: MangaCard }) => {
                         TODO
                         Add a check for characters, character limit is: 234
                         */}
-                        <p>{props.props.description}</p>
+                        <p>{description}</p>
                     </div>
                 </div>
                 <div className="title">
-                    <h3>{props.props.title}</h3>
+                    <h3>{title}</h3>
                 </div>
             </div>
         </>

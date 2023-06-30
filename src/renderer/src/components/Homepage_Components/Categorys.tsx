@@ -11,7 +11,16 @@ const Categorys = (props: { props: Array<MangaCard> }) => {
                 <h1>Header</h1>
             </div>
             <div className="card-row">
-                <Card props={props.props[0]} />
+                {props.props.map((manga) => {
+                    return (
+                        // eslint-disable-next-line react/jsx-key
+                        <Card
+                            title={manga.title}
+                            cover={manga.cover}
+                            description={manga.description}
+                        />
+                    )
+                })}
             </div>
         </div>
     )
