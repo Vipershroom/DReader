@@ -10,7 +10,7 @@
         display: grid;
         grid-template-columns: repeat(5, 10rem);
     }
-    @media (min-width: 950px) {
+    @media (min-width: 980px) {
         .card-row {
             display: grid;
             grid-template-columns: repeat(9, 10rem);
