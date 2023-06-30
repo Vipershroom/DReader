@@ -92,11 +92,30 @@ async function get_recently_updated_manga() {
     return manga
 }
 
+async function get_isekai_manga() {
+    const manga: MangaCard[] = []
+    const search = await MD.Manga.search({
+        includedTags: [await MD.Manga.getTag('isekai')],
+        limit: 10,
+    })
+    for (const elem of search) {
+        const cov = await elem.getCovers()
+        manga.push({
+            title: elem.title,
+            description: elem.description,
+            cover: cov[0].image256,
+        })
+    }
+    return manga
+}
+
 // Listens for a card fetch event to get the manga data
 ipcMain.on('card-fetch', (event) => {
     console.log('Message recieved')
     get_recently_updated_manga().then((data) => {
-        console.log(data[0].title)
         event.reply('card-recieve', data)
+    })
+    get_isekai_manga().then((data) => {
+        event.reply('isekai-recieve', data)
     })
 })

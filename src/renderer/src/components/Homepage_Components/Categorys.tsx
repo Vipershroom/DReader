@@ -4,7 +4,6 @@ import Card from './Card'
 import { MangaCard } from 'src/interfaces/interfaces'
 
 const Categorys = (props: { props: Array<MangaCard> }) => {
-    console.log(props)
     return (
         <div className="categorys">
             <div className="header">
@@ -22,6 +21,7 @@ const Categorys = (props: { props: Array<MangaCard> }) => {
                     )
                 })}
             </div>
+            <div className="header"></div>
         </div>
     )
 }

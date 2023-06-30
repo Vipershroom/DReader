@@ -4,7 +4,14 @@ import Categorys from './Homepage_Components/Categorys'
 import { MangaCard } from '../../../interfaces/interfaces'
 
 const Homepage = () => {
-    const [cardData, setCardData] = useState<Array<MangaCard>>([
+    const [recentlyUpdated, setRecentlyUpdated] = useState<Array<MangaCard>>([
+        {
+            title: 'Placeholder',
+            description: 'Placeholder',
+            cover: '',
+        },
+    ])
+    const [isekai, setIsekai] = useState<Array<MangaCard>>([
         {
             title: 'Placeholder',
             description: 'Placeholder',
@@ -13,15 +20,18 @@ const Homepage = () => {
     ])
     useEffect(() => {
         return () => {
-            console.log('hi')
             window.electron.ipcRenderer.send('card-fetch')
             window.electron.ipcRenderer.on(
                 'card-recieve',
                 (event, data: Array<MangaCard>) => {
-                    console.log(data)
-                    setCardData(data)
-                    // console.log(cardData)
+                    setRecentlyUpdated(data)
                     console.log('Done fetching')
+                }
+            )
+            window.electron.ipcRenderer.on(
+                'isekai-recieve',
+                (event, data: Array<MangaCard>) => {
+                    setIsekai(data)
                 }
             )
         }
@@ -30,7 +40,8 @@ const Homepage = () => {
     return (
         <div>
             <Sources />
-            <Categorys props={cardData} />
+            <Categorys props={recentlyUpdated} />
+            <Categorys props={isekai} />
         </div>
     )
 }
