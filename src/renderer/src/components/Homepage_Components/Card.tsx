@@ -17,7 +17,7 @@ const Card = ({ title, description, cover }: MangaCard) => {
                     </div>
                 </div>
                 <div className="title">
-                    <h3>{title}</h3>
+                    <p>{title}</p>
                 </div>
             </div>
         </>
