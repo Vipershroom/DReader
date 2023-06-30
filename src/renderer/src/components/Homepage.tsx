@@ -31,13 +31,6 @@ const Homepage = () => {
         <div>
             <Sources />
             <Categorys props={cardData} />
-            <button
-                onClick={() => {
-                    console.log()
-                }}
-            >
-                Hello
-            </button>
         </div>
     )
 }
