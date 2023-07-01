@@ -13,10 +13,14 @@ nav {
     .container {
         display: flex;
         justify-content: center;
-        padding: 2rem;
     }
 
     div > * {
-        margin-left: 1rem;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        width: 5rem;
+        height: 3rem;
+        cursor: pointer;
     }
 }
