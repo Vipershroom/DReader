@@ -1,14 +1,23 @@
 .title-wrapper {
     width: 100%;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     .title {
         display: flex;
         align-items: center;
 
-        img {
-            width: 15rem;
-            height: 20rem;
+        .image-container {
+            img {
+                width: 15rem;
+                height: 20rem;
+            }
+            .tags {
+                display: flex;
+                * {
+                    margin-left: .5rem;
+                }
+            }
         }
         h1 {
             margin-left: 5rem;
