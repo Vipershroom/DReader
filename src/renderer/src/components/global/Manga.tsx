@@ -12,9 +12,9 @@ const Manga = () => {
                             alt=""
                         />
                         <div className="tags">
-                            <p>Tag1</p>
-                            <p>Tag2</p>
-                            <p>Tag3</p>
+                            <p>Isekai</p>
+                            <p>Harem</p>
+                            <p>Shounen</p>
                         </div>
                     </div>
                     <h1>Title</h1>

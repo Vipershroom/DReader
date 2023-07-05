@@ -7,7 +7,7 @@ import Manga from './components/global/Manga'
 function App(): JSX.Element {
     return (
         <main>
-            <Homepage /> 
+            <Manga />
             <Navbar />
         </main>
     )
