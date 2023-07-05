@@ -13,7 +13,8 @@
     @media (min-width: 980px) {
         .card-row {
             display: grid;
-            grid-template-columns: repeat(11, 10rem);
+            // 11 for larger screen sizes
+            grid-template-columns: repeat(9, 10rem);
         }
         
     }
