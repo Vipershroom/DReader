@@ -20,7 +20,13 @@ const Manga = () => {
                     <h1>Title</h1>
                 </div>
                 <div className="description">
-                    <div className="content"></div>
+                    <div className="content">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Quae dolores atque nisi praesentium quidem unde
+                        deleniti aperiam voluptatem enim aspernatur ab vero
+                        dicta officiis, nobis, laudantium nulla. Animi, amet!
+                        Inventore!
+                    </div>
                 </div>
                 <div className="chapters"></div>
             </div>
