@@ -4,7 +4,7 @@ const Chapter = () => {
     return (
         <div className="chapter-continer">
             <div className="chapter-content">
-                <h1>Hello, World!</h1>
+                <h3>Ch. 1 - Chapter 1</h3>
             </div>
         </div>
     )

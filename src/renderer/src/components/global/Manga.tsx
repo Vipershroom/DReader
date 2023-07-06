@@ -30,6 +30,8 @@ const Manga = () => {
                     </div>
                 </div>
                 <Chapter />
+                <Chapter />
+                <Chapter />
             </div>
         </div>
     )
