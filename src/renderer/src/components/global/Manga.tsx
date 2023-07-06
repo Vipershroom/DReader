@@ -1,5 +1,6 @@
 import React from 'react'
 import './styles/Manga.scss'
+import Chapter from './Manga_components/Chapter'
 
 const Manga = () => {
     return (
@@ -28,7 +29,7 @@ const Manga = () => {
                         Inventore!
                     </div>
                 </div>
-                <div className="chapters"></div>
+                <Chapter />
             </div>
         </div>
     )
