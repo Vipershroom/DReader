@@ -4,7 +4,7 @@ import Chapter from './Manga_components/Chapter'
 
 const Manga = () => {
     return (
-        <div>
+        <div className="manga">
             <div className="title-wrapper">
                 <div className="title">
                     <div className="image-container">
