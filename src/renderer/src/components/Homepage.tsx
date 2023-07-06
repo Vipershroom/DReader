@@ -9,6 +9,7 @@ const Homepage = () => {
             title: 'Placeholder',
             description: 'Placeholder',
             cover: '',
+            id: '',
         },
     ])
     const [isekai, setIsekai] = useState<Array<MangaCard>>([
@@ -16,6 +17,7 @@ const Homepage = () => {
             title: 'Placeholder',
             description: 'Placeholder',
             cover: '',
+            id: '',
         },
     ])
     useEffect(() => {

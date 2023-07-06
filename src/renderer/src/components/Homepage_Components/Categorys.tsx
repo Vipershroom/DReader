@@ -18,6 +18,7 @@ const Categorys = (props: { props: Array<MangaCard>; header: string }) => {
                             title={manga.title}
                             cover={manga.cover}
                             description={manga.description}
+                            id=""
                         />
                     )
                 })}
