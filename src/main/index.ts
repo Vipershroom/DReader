@@ -104,6 +104,7 @@ async function get_isekai_manga() {
             title: elem.title,
             description: elem.description,
             cover: cov[0].image256,
+            id: elem.id,
         })
     }
     return manga

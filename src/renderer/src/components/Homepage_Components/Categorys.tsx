@@ -3,9 +3,7 @@ import './styles/Category.scss'
 import Card from './Card'
 import { MangaCard } from 'src/interfaces/interfaces'
 
-const Categorys = (
-    props: { props: Array<MangaCard>; header: string }
-) => {
+const Categorys = (props: { props: Array<MangaCard>; header: string }) => {
     return (
         <div className="categorys">
             <div className="header">
@@ -13,6 +11,7 @@ const Categorys = (
             </div>
             <div className="card-row">
                 {props.props.map((manga) => {
+                    console.log(manga.id)
                     return (
                         // eslint-disable-next-line react/jsx-key
                         <Card
